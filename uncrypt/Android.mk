@@ -17,11 +17,10 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES += $(commands_recovery_local_path)
+LOCAL_SRC_FILES := uncrypt.c
 
-LOCAL_SRC_FILES := uncrypt.cpp
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := uncrypt
-
-LOCAL_STATIC_LIBRARIES := libbase liblog libfs_mgr libcutils
+LOCAL_MODULE_TAGS := optional
+LOCAL_STATIC_LIBRARIES := libfs_mgr liblog libcutils
 
 include $(BUILD_EXECUTABLE)
